@@ -1,18 +1,104 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mayur Baldaniya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owned by Mayur Baldaniya</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .container {
       text-align: center;
-      margin-top: 15%;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      background: -webkit-linear-gradient(#8e2de2, #4a00e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      animation: glow 2s infinite alternate;
+    }
+    p {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      opacity: 0.9;
+      margin-top: 20px;
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #8e2de2, 0 0 20px #8e2de2, 0 0 30px #8e2de2;
+      }
+      to {
+        text-shadow: 0 0 20px #4a00e0, 0 0 40px #4a00e0, 0 0 60px #4a00e0;
+      }
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .neon-line {
+      width: 250px;
+      height: 3px;
+      background: linear-gradient(90deg, #8e2de2, #4a00e0);
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(142, 45, 226, 0.8), 0 0 20px rgba(142, 45, 226, 0.6);
+      position: relative;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(1.1);
+      }
+      100% {
+        transform: scaleX(1);
+      }
     }
   </style>
 </head>
 <body>
-  <h1>This Domain is For Sale</h1>
-  <p>If you're interested in purchasing this domain, please contact:</p>
-  <p><strong>your.email@example.com</strong></p>
+  <div class="container">
+    <h1>Owned by Mayur Baldaniya</h1>
+    <div class="neon-line"></div>
+    <p>.   Hiii.   </p>
+  </div>
 </body>
 </html>
+```
